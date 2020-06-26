@@ -52,7 +52,7 @@ sudo mount -o bind /sys <mount directory>/sys
 sudo mount -o bind /dev <mount directory>/dev
 sudo mount -o bind /proc <mount directory>/proc
 sudo chroot <mount directory> /bin/bash
-echo "nameserver 8.8.8.8" | sudo tee /etc/resolv.conf > /dev/null
+echo "nameserver 8.8.8.8" | tee /etc/resolv.conf > /dev/null
 ```
 
 3. You can now use the `apt` to install packages just like you normally would. Two suggested packages are `software-properties-common` (commonly used libraries and interpreters) and `kmod` (modprobe).
